@@ -10,9 +10,20 @@
     @vite('resources/js/app.js')
 </head>
 <body>
-    <h1 class="text-center">
-        Hello World!
-        <i class="fa-solid fa-cart-shopping"></i>
-    </h1>
+    <header>
+        <div class="container py-4 text-white">
+            <div class="row">
+                <div class="col">
+                    <ul class="d-flex gap-3">
+                        @foreach ($navList as $item)
+                            <li>
+                                <a href="#">{{ $item }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 </html>

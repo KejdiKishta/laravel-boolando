@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $navList = ["Donna", "Uomo", "Bambini"];
+
+    $data = [
+        "navList" => $navList,
+    ];
+    return view('welcome', $data);
 });
