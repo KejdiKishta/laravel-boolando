@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $navList = ["Donna", "Uomo", "Bambini"];
+    $headerIcons = ["fa-regular fa-user", "fa-regular fa-heart", "fa-solid fa-bag-shopping"];
 
     $data = [
         "navList" => $navList,
+        "headerIcons" => $headerIcons,
     ];
     return view('welcome', $data);
 });
