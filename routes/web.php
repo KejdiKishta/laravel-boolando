@@ -16,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $navList = ["Donna", "Uomo", "Bambini"];
     $headerIcons = ["fa-regular fa-user", "fa-regular fa-heart", "fa-solid fa-bag-shopping"];
+    $footerIcons = [
+        "fa-brands fa-square-twitter",
+        "fa-brands fa-square-facebook",
+        "fa-brands fa-square-instagram",
+        "fa-brands fa-square-pinterest",
+        "fa-brands fa-youtube"
+    ];
     $products = [
         [
             "id" => 1,
@@ -125,6 +132,7 @@ Route::get('/', function () {
         "navList" => $navList,
         "headerIcons" => $headerIcons,
         "products" => $products,
+        "footerIcons" => $footerIcons,
     ];
     return view('welcome', $data);
 });
