@@ -18,13 +18,17 @@
             <div class="row">
                 {{-- products --}}
                 @foreach ($products as $product)
-                <div class="col-4 p-3">
+                <div class="col-4 p-3 position-relative">
                         {{-- images --}}
                         <img src="{{ Vite::asset("resources/img/" . $product["frontImage"]) }}" alt="">
                         {{-- info --}}
                         <div class="text-secondary ms_font-size">{{ $product["brand"] }}</div>
                         <h6 class="text-uppercase fw-bold m-0">{{ $product["name"] }}</h6>
                         <span class="ms_font-size ms_red fw-bold">{{ $product["price"] }}</span>
+                        {{-- favorites btn --}}
+                        <button type="button" class="btn rounded-0 py-2 px-3 position-absolute bg-white ms_heart-position">
+                            <i class="fa-solid fa-heart {{$product["isInFavorites"] ? 'ms_red' : ''}} "></i>
+                        </button>
                     </div>
                 @endforeach
             </div>
