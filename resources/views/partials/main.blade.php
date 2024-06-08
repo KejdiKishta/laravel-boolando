@@ -5,13 +5,16 @@
             @foreach ($products as $product)
             <div class="col-4 p-3 position-relative">
                     {{-- images --}}
-                    <img src="{{ Vite::asset("resources/img/" . $product["frontImage"]) }}" alt="">
+                    <div class="ms_images">
+                        <img id="ms_first-img" src="{{ Vite::asset("resources/img/" . $product["frontImage"]) }}" alt="">
+                        <img id="ms_second-img" class="h-0" src="{{ Vite::asset("resources/img/" . $product["backImage"]) }}" alt="">
+                    </div>
                     {{-- info --}}
                     <div class="ms_font-size">{{ $product["brand"] }}</div>
                     <h6 class="text-uppercase fw-bold m-0">{{ $product["name"] }}</h6>
-                    <span class="ms_font-size ms_red fw-bold">{{ str_replace('.', ',', $product["price"]) }}</span>
+                    <span class="ms_font-size ms_red fw-bold">{{ str_replace('.', ',', $product["price"]) }} €</span>
                     @if ($product["badges"][0]["type"] === "discount")
-                        <span class="text-decoration-line-through ms_font-size">{{ number_format($product["price"] / (1 - (str_replace(['-','%'], '', $product["badges"][0]["value"])) / 100), 2, ',') }}</span>
+                        <span class="text-decoration-line-through ms_font-size">{{ number_format($product["price"] / (1 - (str_replace(['-','%'], '', $product["badges"][0]["value"])) / 100), 2, ',') }} €</span>
                         {{----------------------------------------------------------------------------------------------------------------------------
                         str_replace per togliere il - e il % dalla stringa del valore
                         1 - risultato (da -50% a 50) / 100 = 0.5

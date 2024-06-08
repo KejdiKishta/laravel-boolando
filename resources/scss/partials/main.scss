@@ -1,4 +1,22 @@
 main{
+    .ms_images{
+        #ms_second-img {
+            display: none;
+        }
+
+        &:hover {
+            #ms_second-img {
+                display: block;
+            }
+
+            #ms_first-img {
+                display: none;
+            }
+        }
+    }
+
+
+
     .ms_red {
         color: red;
     }
