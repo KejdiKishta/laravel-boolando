@@ -4,7 +4,7 @@
 
             {{-- nav col --}}
             <div class="col">
-                <ul class="d-flex gap-3">
+                <ul class="d-flex gap-3 p-0">
                     @foreach ($navList as $item)
                         <li>
                             <a href="#">{{ $item }}</a>
@@ -15,7 +15,9 @@
 
             {{-- logo col --}}
             <div class="col text-center">
-                <img class="w-50" src="{{ Vite::asset("resources/img/boolean-logo.png") }}" alt="">
+                <a href="#">
+                    <img class="w-50" src="{{ Vite::asset("resources/img/boolean-logo.png") }}" alt="">
+                </a>
             </div>
 
             {{-- icons col --}}

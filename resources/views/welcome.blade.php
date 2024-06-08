@@ -12,5 +12,18 @@
 <body>
     {{-- header --}}
     @include('partials.header')
+    {{-- main --}}
+    <main>
+        <div class="container py-5">
+            <div class="row">
+                {{-- images --}}
+                @foreach ($products as $product)
+                    <div class="col-4 p-2">
+                        <img src="{{ Vite::asset("resources/img/" . $product["frontImage"]) }}" alt="">
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </main>
 </body>
 </html>
