@@ -12,13 +12,13 @@
                     <span class="ms_font-size ms_red fw-bold">{{ str_replace('.', ',', $product["price"]) }}</span>
                     @if ($product["badges"][0]["type"] === "discount")
                         <span class="text-decoration-line-through ms_font-size">{{ number_format($product["price"] / (1 - (str_replace(['-','%'], '', $product["badges"][0]["value"])) / 100), 2, ',') }}</span>
-                        {{---------------------------------------------------------------
+                        {{----------------------------------------------------------------------------------------------------------------------------
                         str_replace per togliere il - e il % dalla stringa del valore
                         1 - risultato (da -50% a 50) / 100 = 0.5
                         prezzo (29.99) / 0.5 = 59.98
                         number_format per formattare il risultato, number_format(numero, numero decimali, separatore decimali, separatore migliaia)
                         mi piace la matematica ma tutte ste parentesi mi hanno messo in crisi
-                        --}}
+                        -----------------------------------------------------------------------------------------------------------------------------}}
                     @endif
                     {{-- favorites btn --}}
                     <button type="button" class="btn rounded-0 py-2 px-3 position-absolute bg-white ms_heart-position">
