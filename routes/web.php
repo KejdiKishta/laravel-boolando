@@ -27,13 +27,13 @@ Route::get('/', function () {
             "isInFavorites" => true,
             "badges" => [
                 [
-                "type" => "tag",
-                "value" => "Sostenibilità"
-                ],
-                [
                 "type" => "discount",
                 "value" => "-50%"
-                ]
+                ],
+                [
+                    "type" => "tag",
+                    "value" => "Sostenibilità"
+                ]    
             ]
         ],
         [
@@ -76,12 +76,12 @@ Route::get('/', function () {
             "isInFavorites" => false,
             "badges" => [
                 [
-                "type" => "tag",
-                "value" => "Sostenibilità"
+                    "type" => "discount",
+                    "value" => "-50%"
                 ],
                 [
-                "type" => "discount",
-                "value" => "-50%"
+                "type" => "tag",
+                "value" => "Sostenibilità"
                 ]
             ]
         ],
@@ -95,12 +95,12 @@ Route::get('/', function () {
             "isInFavorites" => true,
             "badges" => [
                 [
-                "type" => "tag",
-                "value" => "Sostenibilità"
-                ],
-                [
                 "type" => "discount",
                 "value" => "-50%"
+                ],
+                [
+                    "type" => "tag",
+                    "value" => "Sostenibilità"
                 ]
             ]
         ],

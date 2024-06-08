@@ -29,6 +29,12 @@
                         <button type="button" class="btn rounded-0 py-2 px-3 position-absolute bg-white ms_heart-position">
                             <i class="fa-solid fa-heart {{$product["isInFavorites"] ? 'ms_red' : ''}} "></i>
                         </button>
+                        {{-- badges --}}
+                        <div class="position-absolute ms_badges-position">
+                            @foreach ($product["badges"] as $badge)
+                                <span class="px-2 py-1 text-white fw-bold ms_font-size {{ $badge["type"] === "tag" ? 'ms_bg-green' : 'ms_bg-red'}}">{{ $badge["value"] }}</span>
+                            @endforeach
+                        </div>
                     </div>
                 @endforeach
             </div>

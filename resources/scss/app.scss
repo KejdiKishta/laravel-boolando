@@ -30,8 +30,21 @@ main{
         color: red;
     }
 
+    .ms_bg-red {
+        background-color: red;
+    }
+
+    .ms_bg-green {
+        background-color: green;
+    }
+
     .ms_heart-position {
         top: 5%;
-        right: 15px;
+        right: 1rem;
+    }
+
+    .ms_badges-position {
+        bottom: 20%;
+        left: 1rem;
     }
 }
