@@ -1,5 +1,7 @@
 // header
 @use "./partials/header.scss";
+// main
+@use "./partials/main.scss";
 
 // bootstrap
 @import "~bootstrap/scss/bootstrap";
@@ -17,34 +19,4 @@ a {
 
 img {
     max-width: 100%;
-}
-
-// main
-
-main{
-    .ms_font-size {
-        font-size: 0.8rem;
-    }
-
-    .ms_red {
-        color: red;
-    }
-
-    .ms_bg-red {
-        background-color: red;
-    }
-
-    .ms_bg-green {
-        background-color: green;
-    }
-
-    .ms_heart-position {
-        top: 5%;
-        right: 1rem;
-    }
-
-    .ms_badges-position {
-        bottom: 20%;
-        left: 1rem;
-    }
 }
